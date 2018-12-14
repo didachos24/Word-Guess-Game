@@ -23,17 +23,18 @@ console.log("Number of spaces to guess: " + mycity.length)
     }
     console.log(cityspaces);
 
+// Start the game, pick a letter
 document.onkeyup = function(event) {
     guess = event.key;
+    for (i=0; i < mycity.length; i++) {
+        if(guess = mycity.char(i)) {
+            cityspaces[i] = guess;
+            console.log(mycity[i]);
+        }
+    }
     sum = sum + 1;
     tries = tries + guess;
-    if(sum < 5) {
-        document.getElementById("spaces").innerHTML =cityspaces;
-        document.getElementById("tries").innerHTML = tries;
-        
-    }
 
-    document.getElementById("spaces").innerHTML = myCity;
 
     console.log(guess, sum, tries);
 
