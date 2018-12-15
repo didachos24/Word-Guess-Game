@@ -1,42 +1,55 @@
 // Initial conditions
 var capitals = ["bogota", "medellin", "cali", "barranquilla", "cartagena"];
-var wins = 0;
-var remain = 0;
-var mycity;
-var cityspaces;
 
 // Create variables to hold references
-    var spaces = document.getElementById("spaces");
-    var remain = document.getElementById("remaining");
-    var guess, sum = 0, tries = "", cityspaces = "";
-
-// var randomCity = document.getElementById("randomCity");
+var wins = 0;
+var mycity,cityspaces, guess, fail = 0, wrong = "", cityspaces = "", isInCapital = false;
 
 // Pick a city
 var mycity = capitals[Math.floor(Math.random() * capitals.length)];
 console.log("City to guess: " + mycity);
 console.log("Number of spaces to guess: " + mycity.length)
 
-    // Number of spaces to guess
+// Number of spaces to guess
     for (i=0; i < mycity.length; i++) {
         cityspaces = cityspaces + "_ ";
     }
     console.log(cityspaces);
 
+
 // Start the game, pick a letter
-document.onkeyup = function(event) {
-    guess = event.key;
-    for (i=0; i < mycity.length; i++) {
-        if(guess = mycity.char(i)) {
-            cityspaces[i] = guess;
-            console.log(mycity[i]);
+    document.onkeyup = function(event) {
+    // Guess letter as variable
+        guess = event.key;
+        console.log(guess);
+    // Compare guess with each letter in capital city
+        for (i=0; i < mycity.length; i++) {
+            let = mycity.charAt(i);
+            console.log(let);
+        // Is guess in capital city? Yes, print letter in array
+            if( let == guess) {
+                cityspaces [i] = let;
+                console.log(let, cityspaces);
+                isInCapital = true;
+                }}
+        // No, +1 fail, print letter in wrong
+        if(isInCapital = false) {
+            fail += 1;
+            wrong = wrong + guess;
+            // 5 fails, finish
+            if(fail = 5){
+                alert("Game Over");
+                alert("The city is " + mycity);
+            }
         }
-    }
-    sum = sum + 1;
-    tries = tries + guess;
 
 
-    console.log(guess, sum, tries);
+
+    console.log(guess, fail, wrong);
 
 
+}
+
+function newFunction() {
+    return cityspaces[i];
 }
