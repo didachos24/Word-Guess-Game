@@ -15,7 +15,7 @@ console.log("Number of spaces to guess: " + mycity.length)
         cityspaces = cityspaces + "_ ";
     }
     console.log(cityspaces);
-
+    // document.getElementById("spaces") = cityspaces;
 
 // Start the game, pick a letter
     document.onkeyup = function(event) {
@@ -29,21 +29,9 @@ console.log("Number of spaces to guess: " + mycity.length)
 
         //Is guess in capital city? Yes, print letter in array
             if( let == guess) {
-                cityspaces.chatAt(i) = let;
-                console.log(i);
+                cityspaces = cityspaces.replace(i, let);
             }
-            }
-        // No, +1 fail, print letter in wrong
-        // if(isInCapital = false) {
-        //     fail += 1;
-        //     wrong = wrong + guess;
-        //     // 5 fails, finish
-        //     if(fail = 5){
-        //         alert("Game Over");
-        //         alert("The city is " + mycity);
-        //     }
+            console.log(cityspaces);
+
         }
-
-
-
-    console.log(guess, fail, wrong);
+    }
