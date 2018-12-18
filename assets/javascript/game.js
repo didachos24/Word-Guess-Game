@@ -22,7 +22,6 @@ console.log("Number of spaces to guess: " + mycity.length)
 
     // Guess letter as variable
         guess = event.key;
-        console.log(guess);
 
     // Compare guess with each letter in capital city
         for (i=0; i < mycity.length; i++) {
@@ -30,7 +29,8 @@ console.log("Number of spaces to guess: " + mycity.length)
 
         //Is guess in capital city? Yes, print letter in array
             if( let == guess) {
-                
+                cityspaces.chatAt(i) = let;
+                console.log(i);
             }
             }
         // No, +1 fail, print letter in wrong
