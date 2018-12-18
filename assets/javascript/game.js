@@ -1,9 +1,9 @@
 // Initial conditions
 var capitals = ["bogota", "medellin", "cali", "barranquilla", "cartagena"];
 
-// Create variables to hold references
-var wins = 0;
-var mycity,cityspaces, guess, fail = 0, wrong = "", cityspaces = "", isInCapital = false;
+// Create variables
+var wins = 0, mycity, cityspaces, guess, fail = 0, wrong = "", cityspaces = "", isInCapital = false;
+var spaces = document.getElementById("tries");
 
 // Pick a city
 var mycity = capitals[Math.floor(Math.random() * capitals.length)];
@@ -19,37 +19,31 @@ console.log("Number of spaces to guess: " + mycity.length)
 
 // Start the game, pick a letter
     document.onkeyup = function(event) {
+
     // Guess letter as variable
         guess = event.key;
         console.log(guess);
+
     // Compare guess with each letter in capital city
         for (i=0; i < mycity.length; i++) {
             let = mycity.charAt(i);
-            console.log(let);
-        // Is guess in capital city? Yes, print letter in array
+
+        //Is guess in capital city? Yes, print letter in array
             if( let == guess) {
-                cityspaces [i] = let;
-                console.log(let, cityspaces);
-                isInCapital = true;
-                }}
-        // No, +1 fail, print letter in wrong
-        if(isInCapital = false) {
-            fail += 1;
-            wrong = wrong + guess;
-            // 5 fails, finish
-            if(fail = 5){
-                alert("Game Over");
-                alert("The city is " + mycity);
+                
             }
+            }
+        // No, +1 fail, print letter in wrong
+        // if(isInCapital = false) {
+        //     fail += 1;
+        //     wrong = wrong + guess;
+        //     // 5 fails, finish
+        //     if(fail = 5){
+        //         alert("Game Over");
+        //         alert("The city is " + mycity);
+        //     }
         }
 
 
 
     console.log(guess, fail, wrong);
-
-
-}
-
-function newFunction() {
-    return cityspaces[i];
-}
