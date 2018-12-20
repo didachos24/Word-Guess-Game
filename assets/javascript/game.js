@@ -4,7 +4,7 @@ var capitals = ["bogota", "medellin", "cali", "barranquilla", "cartagena"];
 // Create variables
 var wins = 0, mycity;
 var cityspaces = ""; 
-// guess, 
+var guesses = 0; 
 var fails = 0;
 var wrong = "";
 logic = false;
@@ -39,10 +39,10 @@ console.log("Number of spaces to guess: " + mycity.length)
 
             if( let == guess) {
              
+                guesses +=1 ;
                 logic = true;
-                // cityspaces.replace.charAt(i) = let;
+                this.cityspaces.charAt(i) = let;
                 // document.getElementById("spaces") = cityspaces;
-                console.log(let, cityspaces,logic);
             } 
         } 
     if ( logic == false ) {  
@@ -54,7 +54,8 @@ console.log("Number of spaces to guess: " + mycity.length)
         document.getElementById("fails").innerHTML = "Number of fails: " + fails;
         
         if ( fails > 4) {
-            alert("Game over!");
+            document.getElementById("image-result").src = "assets/images/hanged.jpg";
+            // alert("Game over!");
         }
     }
 
