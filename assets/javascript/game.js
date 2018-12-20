@@ -2,8 +2,12 @@
 var capitals = ["bogota", "medellin", "cali", "barranquilla", "cartagena"];
 
 // Create variables
-var wins = 0, mycity, cityspaces = "", guess, fail = 0, wrong = "", cityspaces = "", isInCapital = false;
-var spaces = document.getElementById("tries");
+var wins = 0, mycity;
+var cityspaces = ""; 
+// guess, 
+var fails = 0;
+var wrong = "";
+logic = false;
 
 // Pick a city
 var mycity = capitals[Math.floor(Math.random() * capitals.length)];
@@ -15,29 +19,45 @@ console.log("Number of spaces to guess: " + mycity.length)
         cityspaces = cityspaces + "_";
     }
     console.log(cityspaces, cityspaces.length);
-    // document.getElementById("spaces") = cityspaces; // Doesn't show in index*********
+
 
 // Start the game, pick a letter
     document.onkeyup = function(event) {
+
+    // Change spaces to fill with guessed letters and advice how many letters are
+    document.getElementById("spaces").innerHTML = cityspaces + " Letters to guess " + cityspaces.length ; // Doesn't show in index*********
 
     // Guess letter as variable
         guess = event.key;
 
     // Compare guess with each letter in capital city
-    for (i=0; i < mycity.length; i++) {
+    for ( var i = 0 ; i < mycity.length; i++) {
 
-// ************ Here is working************
+        let = mycity.charAt(i);
 
-        //Is guess in capital city? Yes, print letter in array
-            if(mycity.charAt(i) == guess) {
-                // cityspaces.charAt(i) = guess; // Here is the problem*************
-            } else {
-                wrong += guess;
-                fail += 1;
-                // document.getElementById("wrong") = wrong;
-                console.log(wrong, fail);
-            }
+        // If guess is in mycity, print 
 
+            if( let == guess) {
+             
+                logic = true;
+                // cityspaces.replace.charAt(i) = let;
+                // document.getElementById("spaces") = cityspaces;
+                console.log(let, cityspaces,logic);
+            } 
+        } 
+    if ( logic == false ) {  
+   
+        wrong += guess + " ";
+        fails += 1;
+        console.log(fails);
+        document.getElementById("bad-try").innerHTML = "Wrong guesses: " + wrong;
+        document.getElementById("fails").innerHTML = "Number of fails: " + fails;
         
+        if ( fails > 4) {
+            alert("Game over!");
         }
     }
+
+        logic = false;
+}
+

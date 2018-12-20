@@ -5,22 +5,24 @@
     <title>Word Guess Game</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Sirin+Stencil" rel="stylesheet">
-    <script src="assets/javascript/game.js"></script>
+    
 </head>
 <body>
 
     <div>
         <h1  style ="font-family : Permanent Marker;">Colombia Capitol Cities: Word Guess Game</h1>
         <p style = "font-family : Sirin Stencil;">Your mission, if you accept, 
-            is to guess the name of a colombian capital city. Remeber, only three fails.</p>
+            is to guess the name of a colombian capital city. Remember, only five fails.</p>
     </div>
 
     <h3 id="spaces">Press any key to get started!</h3>
 
     <div>
-        <h3>Wrongs: </h3>
-        <p id="tries"></p>
+        <h3 id="bad-try"></h3>
+        <h3 id="fails"></h3>
 
     </div>
+
+    <script src="assets/javascript/game.js"></script>
 </body>
 </html>
