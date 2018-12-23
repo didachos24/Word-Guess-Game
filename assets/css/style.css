@@ -2,4 +2,6 @@ body {
     margin: center;
     width: 100%;
     text-align: center;
+    background-image: url("assets/images/colombia.jpg");
+    background-repeat: repeat-x;
 }

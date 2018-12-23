@@ -31,6 +31,7 @@ console.log("Number of spaces to guess: " + mycity.length)
 
     // Guess letter as variable
         guess = event.key;
+        guess1 = guess.toLowerCase();
 
     // Compare guess with each letter in capital city
     for ( var i = 0 ; i < mycity.length; i++) {
@@ -40,26 +41,25 @@ console.log("Number of spaces to guess: " + mycity.length)
         // If guess is in mycity, print 
 
             if( let == guess) {
-             
+                
+                let = let.toUpperCase();
                 guesses +=1 ;
                 logic = true;
                 cityspaces[i] = let;
                 letcounter -= 1;
                 document.getElementById("spaces").innerHTML = cityspaces + " Letters to guess " + letcounter;
-                if(letcounter <= 0) {
-                    console.log(letcounter);
+                if(guesses >= mycity.length) {
                     document.getElementById("image-result").src = "assets/images/" + mycity + ".jpg";
                     alert("Congratulations, You Win!!!");
-                    location.reload();
                 }
         
             } 
         } 
     if ( logic == false ) {  
-   
+        
+        guess = guess.toUpperCase();
         wrong += guess + " ";
         fails += 1;
-        console.log(fails);
         document.getElementById("bad-try").innerHTML = "Wrong guesses: " + wrong;
         document.getElementById("fails").innerHTML = "Number of fails: " + fails;
         
@@ -72,4 +72,3 @@ console.log("Number of spaces to guess: " + mycity.length)
 
         logic = false;
 }
-
