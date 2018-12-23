@@ -2,30 +2,32 @@
 var capitals = ["bogota", "medellin", "cali", "barranquilla", "cartagena"];
 
 // Create variables
-var wins = 0, mycity;
-var cityspaces = ""; 
+var wins = 0;
+var mycity;
+var letcounter = 0;
+var cityspaces = []; 
 var guesses = 0; 
 var fails = 0;
 var wrong = "";
 logic = false;
 
 // Pick a city
-var mycity = capitals[Math.floor(Math.random() * capitals.length)];
+mycity = capitals[Math.floor(Math.random() * capitals.length)];
+letcounter = mycity.length;
 console.log("City to guess: " + mycity);
 console.log("Number of spaces to guess: " + mycity.length)
 
 // Number of spaces to guess
     for (i=0; i < mycity.length; i+=1) {
-        cityspaces = cityspaces + "_";
+        cityspaces.push("__");
     }
-    console.log(cityspaces, cityspaces.length);
 
 
 // Start the game, pick a letter
     document.onkeyup = function(event) {
 
     // Change spaces to fill with guessed letters and advice how many letters are
-    document.getElementById("spaces").innerHTML = cityspaces + " Letters to guess " + cityspaces.length ; // Doesn't show in index*********
+    document.getElementById("spaces").innerHTML = cityspaces + " Letters to guess " + letcounter; 
 
     // Guess letter as variable
         guess = event.key;
@@ -41,8 +43,16 @@ console.log("Number of spaces to guess: " + mycity.length)
              
                 guesses +=1 ;
                 logic = true;
-                this.cityspaces.charAt(i) = let;
-                // document.getElementById("spaces") = cityspaces;
+                cityspaces[i] = let;
+                letcounter -= 1;
+                document.getElementById("spaces").innerHTML = cityspaces + " Letters to guess " + letcounter;
+                if(letcounter <= 0) {
+                    console.log(letcounter);
+                    document.getElementById("image-result").src = "assets/images/" + mycity + ".jpg";
+                    alert("Congratulations, You Win!!!");
+                    location.reload();
+                }
+        
             } 
         } 
     if ( logic == false ) {  
@@ -55,8 +65,9 @@ console.log("Number of spaces to guess: " + mycity.length)
         
         if ( fails > 4) {
             document.getElementById("image-result").src = "assets/images/hanged.jpg";
-            // alert("Game over!");
+            alert("Game over!");
         }
+
     }
 
         logic = false;
