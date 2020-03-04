@@ -1,12 +1,13 @@
 # Word-Guess-Game
-##### First project using Javascript in Bootcamp
+#### By Diego F. Montealegre Silva
 
-### By Diego F. Montealegre Silva
+##### First project using Javascript in Bootcamp
 
 ## Content
 
 - [Rules](#Rules) 
 - [Setup](#Setup)
+- [Contact](#Contact)
 
 ### Rules
 
@@ -31,3 +32,12 @@ If the user wins, a picture of this city will appear congratulating him/her. In 
 This app runs only using Javascript, there is not necessary to install packages. This is the [link to play online](https://didachos24.github.io/Word-Guess-Game/), also this repository is able to clone using git:
 
 > git clone `https://github.com/didachos24/Word-Guess-Game.git`
+
+### Contact
+
+Feel free to contact me: 
+
+* Email: [didachos24@gmail.com](mailto:didachos24@gmail.com)
+* Twitter: [didachos24](http://twitter.com/didachos24)
+* Github: [didachos24](https://github.com/didachos24)
+* Web: [didachos24.dev](http://didachos24.dev)
