@@ -1,17 +1,16 @@
 # Word-Guess-Game
-### First project using Javascript during my learning route
+##### First project using Javascript in Bootcamp
 
 #### By **Diego F. Montealegre Silva**
 
 ## Content
 
 - [Rules](#Rules) 
+- [](#)
 
 #### Rules
 
-__Word Guess Game: Colombian Capital Cities__ is a hangman game based on principal cities in Colombia. 
-
-A city from an array is selected ramdonly, the cities in the game are:
+__Word Guess Game: Colombian Capital Cities__ is a hangman game based on principal cities in Colombia. A city from an array is selected ramdonly, the cities in the game are:
 
 - Bogota
 - Medellin
@@ -25,3 +24,4 @@ Typing letter by letter the user try to guess each letter in the word, if this l
 
 If the user wins, a picture of this city will appear congratulating him/her. In the other hand, if the user losses, a hanged man will appear with the option to restart the game.
 
+![Screenshot](./assets/images/hanged.jpg)
