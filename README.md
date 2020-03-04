@@ -5,7 +5,7 @@
 
 ## Content
 
-- [Rules] (#Rules) 
+- [Rules](#Rules) 
 
 #### Rules
 
