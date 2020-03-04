@@ -1,5 +1,5 @@
 // Initial conditions
-var capitals = ["bogota", "medellin", "cali", "barranquilla", "cartagena"];
+var capitals = ["bogota", "medellin", "cali", "barranquilla", "cartagena", "neiva", "bucaramanga"];
 
 // Create variables
 var wins = 0;
