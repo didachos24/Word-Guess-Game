@@ -1,14 +1,14 @@
 # Word-Guess-Game
 ##### First project using Javascript in Bootcamp
 
-#### By **Diego F. Montealegre Silva**
+### By Diego F. Montealegre Silva
 
 ## Content
 
 - [Rules](#Rules) 
-- [](#)
+- [Setup](#Setup)
 
-#### Rules
+### Rules
 
 __Word Guess Game: Colombian Capital Cities__ is a hangman game based on principal cities in Colombia. A city from an array is selected ramdonly, the cities in the game are:
 
@@ -24,4 +24,10 @@ Typing letter by letter the user try to guess each letter in the word, if this l
 
 If the user wins, a picture of this city will appear congratulating him/her. In the other hand, if the user losses, a hanged man will appear with the option to restart the game.
 
-![Screenshot](./assets/images/hanged.jpg)
+![Hanged man](/assets/images/hanged.jpg)
+
+### Setup
+
+This app runs only using Javascript, there is not necessary to install packages. This is the [link to play online](https://didachos24.github.io/Word-Guess-Game/), also this repository is able to clone using git:
+
+> git clone https://github.com/didachos24/Word-Guess-Game.git
