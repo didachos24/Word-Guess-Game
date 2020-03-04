@@ -1,7 +1,7 @@
-##### Word-Guess-Game
+# Word-Guess-Game
 ### First project using Javascript during my learning route
 
-# By **Diego F. Montealegre Silva**
+##### By **Diego F. Montealegre Silva**
 
 __Word Guess Game: Colombian Capital Cities__ is a hangman game based on principal cities in Colombia. 
 
