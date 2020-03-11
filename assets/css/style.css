@@ -2,6 +2,15 @@ body {
     margin: center;
     width: 100%;
     text-align: center;
-    background-image: url("assets/images/colombia.jpg");
+    background-image: url("../images/colombia.jpg");
     background-repeat: repeat-x;
+}
+
+h1 {
+    align-content: center;
+    font-family : Permanent Marker;
+}
+
+p {
+    font-family : Sirin Stencil;
 }

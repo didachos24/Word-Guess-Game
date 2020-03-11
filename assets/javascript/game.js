@@ -1,7 +1,19 @@
 // Initial conditions
-var capitals = ["bogota", "medellin", "cali", "barranquilla", "cartagena", "neiva", "bucaramanga"];
+var capitals = [
+    "bogota", 
+    "medellin", 
+    "cali", 
+    "barranquilla", 
+    "cartagena", 
+    "neiva", 
+    "popayan", 
+    "mitu", 
+    "pasto", 
+    "pereira", 
+    "tunja", 
+    "bucaramanga"];
 
-// Create variables
+// Variables
 var wins = 0;
 var mycity;
 var letcounter = 0;
@@ -14,8 +26,8 @@ logic = false;
 // Pick a city
 mycity = capitals[Math.floor(Math.random() * capitals.length)];
 letcounter = mycity.length;
-console.log("City to guess: " + mycity);
-console.log("Number of spaces to guess: " + mycity.length)
+console.log("City: " + mycity);
+console.log("Number of letters: " + mycity.length)
 
 // Number of spaces to guess
     for (i=0; i < mycity.length; i+=1) {
@@ -49,6 +61,8 @@ console.log("Number of spaces to guess: " + mycity.length)
                 letcounter -= 1;
                 document.getElementById("spaces").innerHTML = cityspaces + " Letters to guess " + letcounter;
                 if(guesses >= mycity.length) {
+                    document.getElementById("image-result").style.height="400px";
+                    document.getElementById("image-result").style.weight="600px";
                     document.getElementById("image-result").src = "assets/images/" + mycity + ".jpg";
                     alert("Congratulations, You Win!!!");
                 }
@@ -60,8 +74,8 @@ console.log("Number of spaces to guess: " + mycity.length)
         guess = guess.toUpperCase();
         wrong += guess + " ";
         fails += 1;
-        document.getElementById("bad-try").innerHTML = "Wrong guesses: " + wrong;
-        document.getElementById("fails").innerHTML = "Number of fails: " + fails;
+        document.getElementById("bad-try").innerHTML = "Wrongs: " + wrong;
+        document.getElementById("fails").innerHTML = "Fails: " + fails;
         
         if ( fails > 4) {
             document.getElementById("image-result").src = "assets/images/hanged.jpg";
