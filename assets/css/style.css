@@ -1,16 +1,22 @@
-body {
+ /* {
     margin: center;
     width: 100%;
     text-align: center;
     background-image: url("../images/colombia.jpg");
-    background-repeat: repeat-x;
-}
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
 
-h1 {
+h1, h3 {
     align-content: center;
     font-family : Permanent Marker;
 }
 
 p {
-    font-family : Sirin Stencil;
+    font-family : 'Pacifico', cursive;
+}
+
+.subbg {
+    background-color : #fcd303;
+    padding: 5px;
 }
